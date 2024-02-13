@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Rango says hey there partner!")
+    return HttpResponse("Rango says hey there partner! <a href= 'rango/about'/> About</a>")
+
+def about(request):
+    return HttpResponse('Rango says here is the about page. <a href= ''>Index</a>')
 
 # Each view exists in views.py as series of individual functions. 
 # Each view takes at least one arguement - a HttpRequest object, 
@@ -15,7 +18,3 @@ def index(request):
 
 # For a user to see a view, we must map a Uniform Resource Locator(URL)
 # to the view
-
-
-
-

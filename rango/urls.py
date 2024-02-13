@@ -4,7 +4,10 @@ from rango import views
 app_name = 'rango'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('', views.about, name='index'),
+    
+
     # path function - first parameter is the string to match 
     # empty string '' a match is only found if there is nothing after
     # http://127.0.0.1:8000/ as this part is the domain name 

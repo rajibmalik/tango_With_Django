@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.
 
@@ -21,3 +22,6 @@ class Page(models.Model):
 
     def __str__(self):
         return self.title
+    
+class PageAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category','url')
